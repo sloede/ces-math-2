@@ -24,12 +24,12 @@ md"""
 In this notebook, we will look at different approaches to approximate a given function with polynomial interpolation. We know the interpolation error ``E_n`` of a polynomial of degree ``n`` and for a function ``f \in C^{n+1}[a, b]`` to be
 ```math
 E_n[f](x) = \frac{\omega_{n+1}}{(n + 1)!} f^{(n+1)}(\xi),
-```math
-where ``\xi \in [a, b]`` and
-```math
-\omega_{n+1}(x) = \prod\limits_{j = 0}^{n} (x - x_j),
 ```
-and ``\xi \in [a, b]`` is an unknown location. Thus, the total error is based on both the function to interpolate ``f^{(n+1)}(\xi)`` and the function-independent node locations ``\frac{\omega_{n+1}}{(n + 1)!}``.
+where ``\xi \in [a, b]`` is an unknown location and
+```math
+\omega_{n+1}(x) = \prod\limits_{j = 0}^{n} (x - x_j).
+```
+Thus, the total error is based on both the function to interpolate ``f^{(n+1)}(\xi)`` and the function-independent node locations ``\frac{\omega_{n+1}}{(n + 1)!}``.
 
 Below, the left plot shows the function and its interpolation, while the right plot shows the nodal error (and its optimal bounds given by the Chebyshev nodes). We also give the computed maximum error and the integral error of the interpolant on ``[a, b]``.
 """
@@ -403,7 +403,7 @@ PLUTO_MANIFEST_TOML_CONTENTS = """
 
 julia_version = "1.8.3"
 manifest_format = "2.0"
-project_hash = "fbc8e5874ef786f3acb1c989c7ed780969285cf6"
+project_hash = "75ee9cc01f09fa7ad51a0e078b75bd27fd8de878"
 
 [[deps.AbstractPlutoDingetjes]]
 deps = ["Pkg"]
